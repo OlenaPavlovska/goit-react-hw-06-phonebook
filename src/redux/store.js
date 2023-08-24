@@ -6,7 +6,7 @@ import contactsReducer from "./contactSlice"
 
 
 const saveConfig = {
-    key: 'contacts',storage
+    key: 'root',storage,
 }
 
 const persistedReducer= persistReducer(saveConfig,contactsReducer)

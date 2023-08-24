@@ -14,9 +14,9 @@ import { addContacts,deleteContacts, updateFilter } from "redux/contactSlice.js"
 export const App=() => {
   const contacts = useSelector(state=>state.contacts.contacts)
   const filter = useSelector(state=>state.contacts.filter)
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
-const filterContacts =()=> contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
+const filterContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))
 
 const addContact = ({name,number})=>{
   const existContacts = contacts.find(contact => contact.name && contact.name.toLowerCase() === name.toLowerCase())
